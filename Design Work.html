@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+			<title>Design Work</title>
+<link href="emdstylesheet.css" rel="stylesheet" type="text/css">
+	</head>
+<body>
+	<div class="head">
+	  <img src="EMD Logo.png" alt="EM Design logo" width="100" height="100" id="left">
+    </div>
+	<ul class="nav">
+		<li>
+			<a href="index.html">Home</a>
+		</li>
+		<li>
+			<a href="Creative Services.html">Services & Packages</a>
+		</li>
+		<li>
+			<a href="Contact Emily.html">Contact Emily</a>
+		</li>
+	</ul>
+<style>
+body {
+   margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: #01445D;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #01445D;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+<h2 style="text-align:center" font color="#01445D"> <strong>Design Work Gallery</strong></h2>
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="images/MGD105_McElwain_BookCover_mockup_FullCover&Back.jpg" width="50%" align="center" alt="book cover of don quxiote"/>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+   <img src="images/9th Street Logo.JPG" width="50%" align="center" alt="ninth stree logo"/>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+   <img src="images/Social_Change.JPG" width="50%" alt="college FAFSA photo"/>
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div><img src="images/Label _Final_MockUp.JPG" width="50%" alt="wine bottle labels"/>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+  <img src="images/harriet.jpg" width="50%" alt="dog with crown"/></div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+  <img src="images/no exit cover.jpg" width="50%" alt="no exit book cover"/> </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container" color="01445D">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column"> <img src="images/MGD105_McElwain_BookCover_mockup_FullCover&Back.jpg" width="100" onclick="currentSlide(1)" alt="Don Quxiote Book Cover"/></div>
+    <div class="column"> <img src="images/9th Street Logo.JPG" width="100" onclick="currentSlide(2)" alt="Ninth Street Bistro Logo"/></div>
+    <div class="column"><img src="images/Social_Change.JPG" width="100" onclick="currentSlide(3)" alt="college FAFSA flyer"/></div>
+    <div class="column"> <img src="images/Label _Final_MockUp.JPG" width="100" onclick="currentSlide(4)" alt="wine bottles"/></div>
+    <div class="column"> <img src="images/harriet.jpg" width="100" onclick="currentSlide(5)" alt="dog with crown"/> </div>    
+    <div class="column"> <img src="images/no exit cover.jpg" width="100" onclick="currentSlide(6)" alt="No exit book cover"/></div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+	<footer>© 2022 Emily McElwain Designs</footer>
+</body>
+</html>
